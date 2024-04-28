@@ -46,6 +46,7 @@ jobs:
       - name: Deploy to Cloud Run Job
         run: |
           gcloud beta run deploy octovy \
+            --project=mztn-octovy \
             --image=asia-northeast1-docker.pkg.dev/mztn-octovy/service-images/octovy:${{ github.sha }} \
             --region=asia-northeast1 \
             --ingress=all \
