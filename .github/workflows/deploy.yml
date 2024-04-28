@@ -56,6 +56,7 @@ jobs:
             --image=asia-northeast1-docker.pkg.dev/mztn-octovy/service-images/octovy:${{ github.sha }} \
             --region=asia-northeast1 \
             --ingress=all \
+            --memory=2Gi \
             --set-env-vars "
               OCTOVY_GITHUB_APP_PRIVATE_KEY=${{ secrets.OCTOVY_GITHUB_APP_PRIVATE_KEY }},
               OCTOVY_GITHUB_APP_SECRET=${{ secrets.OCTOVY_GITHUB_APP_SECRET }}" \
