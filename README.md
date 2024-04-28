@@ -1,2 +1,4 @@
 # octovy-deploy
-Octovy deployment workflow for my own
+
+Octovy deployment workflow for m-mizutani
+
