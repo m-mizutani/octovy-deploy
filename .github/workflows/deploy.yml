@@ -43,6 +43,12 @@ jobs:
       id-token: write
       contents: read
     steps:
+      - id: auth
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          workload_identity_provider: "projects/76857761541/locations/global/workloadIdentityPools/github-pool/providers/github-actions"
+          service_account: octovy-deployer@mztn-octovy.iam.gserviceaccount.com
       - name: Deploy to Cloud Run Job
         run: |
           gcloud beta run deploy octovy \
