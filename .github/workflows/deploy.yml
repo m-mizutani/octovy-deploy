@@ -57,8 +57,8 @@ jobs:
             --region=asia-northeast1 \
             --ingress=all \
             --memory=2Gi \
-            --set-env-vars "
-              OCTOVY_GITHUB_APP_PRIVATE_KEY=${{ secrets.OCTOVY_GITHUB_APP_PRIVATE_KEY }},
-              OCTOVY_GITHUB_APP_SECRET=${{ secrets.OCTOVY_GITHUB_APP_SECRET }}" \
+            --set-secrets "
+              OCTOVY_GITHUB_APP_PRIVATE_KEY=projects/76857761541/secrets/OCTOVY_GITHUB_APP_PRIVATE_KEY:latest,
+              OCTOVY_GITHUB_APP_SECRET=projects/76857761541/secrets/OCTOVY_GITHUB_APP_SECRET:latest" \
             --args serve \
             --service-account=octovy-runner@mztn-octovy.iam.gserviceaccount.com
