@@ -1,4 +1,4 @@
-FROM ghcr.io/m-mizutani/octovy:f014be1353f456e0f079eec662dfe9a4567daa53
+FROM ghcr.io/m-mizutani/octovy:931cba56b8b2cbba56f9aab6ceec595f90d033b3
 
 WORKDIR /
 
